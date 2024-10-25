@@ -548,7 +548,6 @@ img {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
-  /* Для атрибута placeholder заданий стиль color #ffffff; для визначення кольору тексту */
 }
 
 .footer-btn {
@@ -572,12 +571,6 @@ img {
   font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
-
-/* .footer-iput-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .footer-send {
   fill: #fff;
