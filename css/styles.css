@@ -708,7 +708,10 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 24px;
+}
+
+.modal-fiel-textarea {
+  margin-bottom: 16px;
 }
 
 .input-wrapper {
@@ -744,11 +747,15 @@ img {
 
 .modal-check-text {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
   align-items: center;
+}
+
+.modal-check-span {
+  display: inline-flex;
 }
 
 .modal-check-text span {
