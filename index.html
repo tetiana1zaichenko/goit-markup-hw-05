@@ -467,10 +467,11 @@
                 placeholder="Email"
                 class="footer-input"
               />
-              <button type="submit" class="footer-btn">Subscribe <svg class="footer-send" width="24" height="24"></svg>
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg></button>
-              
+              <button type="submit" class="footer-btn">
+                Subscribe<svg class="footer-send" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
             </div>
           </form>
         </div>
@@ -483,7 +484,7 @@
       <div class="modal">
         <button type="button" class="modal-open">
           <svg class="close-svg" width="24" height="24">
-            <use href="./images/icons.svg#icon-close"></use>
+            <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
@@ -510,7 +511,6 @@
                 name="user-tel"
                 id="user-tel"
                 class="modal-input"
-                placeholder="Phone"
               />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
@@ -525,7 +525,6 @@
                 name="user-email"
                 id="user-email"
                 class="modal-input"
-                placeholder="Email"
               />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email"></use>
@@ -538,6 +537,7 @@
               name="user-comment"
               id="user-comment"
               class="modal-textarea"
+              placeholder="Text input"
             ></textarea>
           </div>
 
@@ -545,13 +545,17 @@
             <input
               type="checkbox"
               name="policy"
-              id="polisy "
+              id="polisy"
               class="modal-check visually-hidden"
               value="true"
             />
             <label for="polisy" class="modal-check-text"
-              ><span></span> accept the terms and conditions of the Privacy
-              Policy</label
+              ><span>
+                <svg class="modal-check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the Privacy Policy</label
             >
           </div>
 

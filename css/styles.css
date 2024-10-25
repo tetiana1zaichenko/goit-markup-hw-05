@@ -581,13 +581,16 @@ img {
   height: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -605,14 +608,28 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* как крестик свинуть влево */
+
+.backdrop:not(.is-open) .modal {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
 .modal-open {
   margin-bottom: 24px;
-  border-radius: 100%;
-  fill: #e7e9fc;
+  border-radius: 50%;
+  background-color: #e7e9fc;
   stroke-width: 1px;
   stroke: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.modal-open:hover,
+.modal-open:focus {
+  background-color: #404bbf;
+  border: 0;
 }
 
 .close-svg {
@@ -620,6 +637,11 @@ img {
   width: 8px;
   height: 8px;
   fill: #2e2f42;
+}
+
+.modal-open:hover,
+.modal-open:focus .close-svg {
+  fill: #fff;
 }
 
 .modal-title {
@@ -630,6 +652,7 @@ img {
   text-align: center;
   color: #2e2f42;
   max-width: 360px;
+  margin-top: 48px;
   margin-bottom: 16px;
 }
 
@@ -673,6 +696,10 @@ img {
 
 .modal-fiel {
   margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 
 .input-wrapper {
@@ -685,6 +712,15 @@ img {
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-check-text {
@@ -693,6 +729,7 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
+  align-items: center;
 }
 
 .modal-check-text span {
@@ -701,7 +738,14 @@ img {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 
-.modal-check:checked + .modal-check-text {
+.modal-check:checked + .modal-check-text span {
+  background-color: #404bbf;
+  border: none;
+  fill: #fff;
 }
