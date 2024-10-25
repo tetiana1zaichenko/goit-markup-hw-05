@@ -532,7 +532,7 @@ img {
 
 .footer-form {
   display: flex;
-  gap: 8px;
+  /* gap: 24px; */
 }
 
 .footer-input {
@@ -542,8 +542,13 @@ img {
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  padding: 8px 16px;
+  padding-left: 16px;
   margin-right: 24px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  /* Для атрибута placeholder заданий стиль color #ffffff; для визначення кольору тексту */
 }
 
 .footer-btn {
@@ -554,25 +559,29 @@ img {
   gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   font-weight: 500;
+  border: none;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+  font-family: "Roboto";
+  cursor: pointer;
 }
 
-.footer-iput-btn {
+/* .footer-iput-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .footer-send {
   fill: #fff;
+  margin-left: 16px;
 }
 
 /* ---------------modal-window---------- */
